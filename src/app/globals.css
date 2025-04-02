@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -11,13 +13,6 @@
   --operation-bg: #ff9500;
   --operation-hover: #ff8000;
   --operation-active: #ff6000;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,68 +101,70 @@ html[data-theme="result"] {
   --operation-active: #c92950;
 }
 
-.calculator {
-  background-color: var(--calculator-bg);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  width: 320px;
-  max-width: 100%;
-  transition: all 0.3s ease;
-}
+@layer components {
+  .calculator {
+    background-color: var(--calculator-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 320px;
+    max-width: 100%;
+    transition: all 0.3s ease;
+  }
 
-.calculator-display {
-  background-color: var(--display-bg);
-  color: var(--foreground);
-  font-size: 2rem;
-  padding: 1rem;
-  text-align: right;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  min-height: 4.5rem;
-  transition: all 0.3s ease;
-  word-break: break-all;
-}
+  .calculator-display {
+    background-color: var(--display-bg);
+    color: var(--foreground);
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: right;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    min-height: 4.5rem;
+    transition: all 0.3s ease;
+    word-break: break-all;
+  }
 
-.calculator-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
-}
+  .calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
 
-.calculator-button {
-  background-color: var(--button-bg);
-  border: none;
-  border-radius: 8px;
-  color: var(--foreground);
-  font-size: 1.25rem;
-  padding: 1rem;
-  transition: all 0.1s ease;
-  cursor: pointer;
-}
+  .calculator-button {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 8px;
+    color: var(--foreground);
+    font-size: 1.25rem;
+    padding: 1rem;
+    transition: all 0.1s ease;
+    cursor: pointer;
+  }
 
-.calculator-button:hover {
-  background-color: var(--button-hover);
-}
+  .calculator-button:hover {
+    background-color: var(--button-hover);
+  }
 
-.calculator-button:active {
-  background-color: var(--button-active);
-  transform: scale(0.97);
-}
+  .calculator-button:active {
+    background-color: var(--button-active);
+    transform: scale(0.97);
+  }
 
-.operation {
-  background-color: var(--operation-bg);
-  color: white;
-}
+  .operation {
+    background-color: var(--operation-bg);
+    color: white;
+  }
 
-.operation:hover {
-  background-color: var(--operation-hover);
-}
+  .operation:hover {
+    background-color: var(--operation-hover);
+  }
 
-.operation:active {
-  background-color: var(--operation-active);
-}
+  .operation:active {
+    background-color: var(--operation-active);
+  }
 
-.span-2 {
-  grid-column: span 2;
+  .span-2 {
+    grid-column: span 2;
+  }
 }
