@@ -1,4 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 테마 변환 계산기
+
+Next.js로 개발된 인터랙티브 계산기 웹 애플리케이션입니다. 기본적인 계산 기능과 함께 다양한 테마 변환 기능을 제공합니다.
+
+## 주요 기능
+
+### 기본 계산기 기능
+- 덧셈, 뺄셈, 곱셈, 나눗셈 등 기본 산술 연산
+- 소수점 계산 지원
+- 입력값 지우기(DEL) 및 초기화(AC) 기능
+
+### 테마 변환 기능
+- 시간대별 자동 테마 변경 (아침/저녁)
+- 계산 결과에 따른 테마 변경:
+  - 100 이상의 결과: 특별 테마
+  - 0 미만의 결과: 다크 테마
+  - 그 외: 시간대별 테마
+- 수동 테마 전환 버튼
+
+## 기술 스택
+- Next.js 15
+- React 19
+- TypeScript
+- CSS Variables 활용한 테마 구현
+- React Context API로 상태 관리
+
+## 설치 및 실행 방법
+
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+
+# 빌드
+npm run build
+
+# 프로덕션 모드 실행
+npm start
+```
+
+## 주의사항
+이 프로젝트는 Next.js 13 이상의 App Router 구조를 사용하며, 클라이언트 컴포넌트와 서버 컴포넌트 개념을 적용합니다.
 
 ## Getting Started
 

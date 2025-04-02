@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --calculator-bg: #f0f0f0;
+  --display-bg: #ffffff;
+  --button-bg: #e0e0e0;
+  --button-hover: #d0d0d0;
+  --button-active: #c0c0c0;
+  --operation-bg: #ff9500;
+  --operation-hover: #ff8000;
+  --operation-active: #ff6000;
 }
 
 @theme inline {
@@ -16,6 +24,14 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --calculator-bg: #1c1c1c;
+    --display-bg: #2c2c2c;
+    --button-bg: #333333;
+    --button-hover: #444444;
+    --button-active: #555555;
+    --operation-bg: #ff9500;
+    --operation-hover: #ff8000;
+    --operation-active: #ff6000;
   }
 }
 
@@ -23,4 +39,135 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --calculator-bg: #f0f0f0;
+  --display-bg: #ffffff;
+  --button-bg: #e0e0e0;
+  --button-hover: #d0d0d0;
+  --button-active: #c0c0c0;
+  --operation-bg: #ff9500;
+  --operation-hover: #ff8000;
+  --operation-active: #ff6000;
+}
+
+html[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --calculator-bg: #1c1c1c;
+  --display-bg: #2c2c2c;
+  --button-bg: #333333;
+  --button-hover: #444444;
+  --button-active: #555555;
+  --operation-bg: #ff9500;
+  --operation-hover: #ff8000;
+  --operation-active: #ff6000;
+}
+
+html[data-theme="morning"] {
+  --background: #f0f8ff;
+  --foreground: #333333;
+  --calculator-bg: #e6f0ff;
+  --display-bg: #ffffff;
+  --button-bg: #d4e6ff;
+  --button-hover: #c0d9ff;
+  --button-active: #a6c8ff;
+  --operation-bg: #ff9a76;
+  --operation-hover: #ff8a66;
+  --operation-active: #ff7a56;
+}
+
+html[data-theme="evening"] {
+  --background: #292841;
+  --foreground: #e0e0e0;
+  --calculator-bg: #1e1e30;
+  --display-bg: #383852;
+  --button-bg: #444463;
+  --button-hover: #555575;
+  --button-active: #666687;
+  --operation-bg: #8857d0;
+  --operation-hover: #7946bf;
+  --operation-active: #6a35ae;
+}
+
+html[data-theme="result"] {
+  --background: #1a1a2e;
+  --foreground: #e94560;
+  --calculator-bg: #16213e;
+  --display-bg: #0f3460;
+  --button-bg: #533483;
+  --button-hover: #6247aa;
+  --button-active: #7161ef;
+  --operation-bg: #e94560;
+  --operation-hover: #d9375a;
+  --operation-active: #c92950;
+}
+
+.calculator {
+  background-color: var(--calculator-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 320px;
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.calculator-display {
+  background-color: var(--display-bg);
+  color: var(--foreground);
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: right;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  min-height: 4.5rem;
+  transition: all 0.3s ease;
+  word-break: break-all;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.calculator-button {
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 8px;
+  color: var(--foreground);
+  font-size: 1.25rem;
+  padding: 1rem;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.calculator-button:hover {
+  background-color: var(--button-hover);
+}
+
+.calculator-button:active {
+  background-color: var(--button-active);
+  transform: scale(0.97);
+}
+
+.operation {
+  background-color: var(--operation-bg);
+  color: white;
+}
+
+.operation:hover {
+  background-color: var(--operation-hover);
+}
+
+.operation:active {
+  background-color: var(--operation-active);
+}
+
+.span-2 {
+  grid-column: span 2;
 }
