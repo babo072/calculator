@@ -1,7 +1,7 @@
 'use client';
 
 import { useReducer } from 'react';
-import { CalculatorState, CalculatorAction, Operation } from '../types/calculator';
+import { CalculatorState, CalculatorAction } from '../types/calculator';
 
 const initialState: CalculatorState = {
   currentValue: '0',
